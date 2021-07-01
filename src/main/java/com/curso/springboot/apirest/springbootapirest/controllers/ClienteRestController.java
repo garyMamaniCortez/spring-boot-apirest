@@ -19,4 +19,15 @@ public class ClienteRestController {
     public List<Cliente> index(){
         return clienteService.findAll();
     }
+
+    @GetMapping("/clientes/{id}")
+    public Cliente show(@PathVariable(value="id",required=true) Long id){
+        return clienteService.findById(id);
+    }
+
+    @PostMapping("/clientes")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Cliente create(@RequestBody Cliente cliente){
+        return clienteService.save(cliente);
+    }
 }
