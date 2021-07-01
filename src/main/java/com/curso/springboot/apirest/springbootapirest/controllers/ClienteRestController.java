@@ -21,7 +21,7 @@ public class ClienteRestController {
     }
 
     @GetMapping("/clientes/{id}")
-    public Cliente show(@PathVariable(value="id",required=true) Long id){
+    public Cliente show(@PathVariable Long id){
         return clienteService.findById(id);
     }
 
