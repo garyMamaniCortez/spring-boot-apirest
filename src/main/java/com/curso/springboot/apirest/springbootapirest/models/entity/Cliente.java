@@ -3,14 +3,7 @@ package com.curso.springboot.apirest.springbootapirest.models.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 
 @Entity
 @Table( name="clientes" )
@@ -29,6 +22,10 @@ public class Cliente implements Serializable{
     @Temporal(TemporalType.DATE)
     private Date createAt;
 
+    @PrePersist
+    public void prePersist(){
+        createAt= new Date();
+    }
     public Long getId(){
         return id;
     }
