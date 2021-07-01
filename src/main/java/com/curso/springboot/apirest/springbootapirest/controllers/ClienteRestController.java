@@ -7,7 +7,7 @@ import java.util.List;
 import com.curso.springboot.apirest.springbootapirest.models.entity.Cliente;
 import com.curso.springboot.apirest.springbootapirest.models.services.IClienteService;
 
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api")
 public class ClienteRestController {
