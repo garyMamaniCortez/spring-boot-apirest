@@ -2,7 +2,7 @@
 this is a proyect to practice my squills with spring boot
 ## Tecnologies
 - Spring Boot
-- Visual Code
+- Java
 - MySQL
 ## About how to run it
 In CMD put:
